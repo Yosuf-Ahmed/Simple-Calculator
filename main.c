@@ -1,5 +1,5 @@
 #include<stdio.h>
-#define OPERATION_NUM 4
+#define OPERATION_NUM 5
 
 /* ======== Function Declarations " Prototypes " ======== */
 void HelloAndMenu(void);
@@ -7,6 +7,7 @@ double addition(double a, double b);
 double subtraction(double a, double b);
 double multication(double a, double b);
 double divition(double a, double b);
+int pow(int a, int b);
 /* ======== The MAIN Function ======== */
 int main(void){
 
@@ -14,6 +15,8 @@ int main(void){
     int operation_Selection;
     double F_number;
     double S_number;
+    int base;
+    int power;
     while(1){
     while(1){
     HelloAndMenu();
@@ -66,7 +69,18 @@ int main(void){
             printf("\nCan not4 Divided By Zero ... Please Try Again \n");
         }
         break;
-    }
+
+     case 5:
+         printf("\n Your Selection is Power\n");
+        printf("Enter The base : ");
+        scanf("%d", &base);
+        printf("Enter The power : ");
+        scanf("%d", &power);
+        printf("%d to the  Power of %d = %d\n ", base, power, pow(base, power));
+        break;
+
+
+}
     while(1){
     printf("\n Do You Need To perform Another Operation :\n");
     printf("1]YES\n");
@@ -101,6 +115,7 @@ void HelloAndMenu(void){
     printf("2] Subtraction\n");
     printf("3] Multiplication\n");
     printf("4] Division\n");
+    printf("5] power\n");
 }
 
 
@@ -118,8 +133,15 @@ double multication(double a, double b){
     return a*b;
 }
 
+int pow(int a, int b) {
+    int result = 1;
+    for (int i=1; i<=b; i++) {
+        result *= a;
+    }
+    return result;
+}
+
 
 double divition(double a, double b){
     return a/b;
 }
-
