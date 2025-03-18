@@ -1,0 +1,30 @@
+# تجاهل ملفات الترجمة والمخرجات
+*.o
+*.obj
+*.exe
+*.out
+*.a
+*.lib
+*.so
+*.dll
+*.dylib
+
+# تجاهل مجلدات البناء الخاصة بـ CMake
+/cmake-build-*/
+CMakeCache.txt
+CMakeFiles/
+CMakeLists.txt.user
+Makefile
+
+# تجاهل ملفات بيئة CLion (JetBrains)
+/.idea/
+
+# تجاهل ملفات بيئة CodeBlocks
+*.cbp
+*.workspace
+
+# تجاهل ملفات النظام غير الضرورية (Windows و macOS)
+.DS_Store
+Thumbs.db
+*.log
+*.swp
